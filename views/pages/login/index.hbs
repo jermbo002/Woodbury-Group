@@ -1,0 +1,44 @@
+<div class="c-login">
+    <div class="c-login__logo">
+        <!-- <img src="/img/logos/logo.v1.svg" width="" height="" alt="" /> -->
+    </div>
+    <h1 class="c-login__hdr">Sign In</h1>
+    <p class="c-login__info hidden">Attempting to login with your credentials, please wait...</p>
+    <form id="js-form-sign-in" data-mode="sign-in" class="c-login__form">
+        <div id="js-row-name" class="c-login__row hidden">
+            <div class="c-login__input">
+                <i class="far fa-user"></i>
+                <input type="text" id="tb-text" name="name" placeholder="Name" />
+            </div>
+        </div>
+        <div class="c-login__row">
+            <div class="c-login__input">
+                <i class="far fa-envelope"></i>
+                <input type="text" id="tb-email" name="email" placeholder="Email Address" />
+            </div>
+        </div>
+        <div id="js-row-pwd" class="c-login__row">
+            <div class="c-login__input">
+                <i class="far fa-lock-alt"></i>
+                <input type="password" id="tb-pwd" name="pwd" placeholder="Password" />
+            </div>
+        </div>
+        <div id="js-row-forgot-pwd" class="c-login__row c-login__row--text-right">
+            <button id="js-btn-forgot" class="c-btn c-btn--text">Forgot Password</button>
+        </div>
+        <div id="js-row-error" class="c-login__row hidden">
+            <p>* All fields are required.</p>
+        </div>
+        <div class="c-login__row">
+            <button id="js-btn-sign-in" class="c-btn c-btn--full c-btn--dark c-btn--icon-edge"><span>Sign In</span><i class="fal fa-angle-right"></i></button>
+        </div>
+        <div class="c-login__row c-login__row--text-center">
+            <button id="js-btn-no-account" class="c-btn c-btn--text">Don't have an account?</button>
+        </div>
+        <div class="c-login__row">
+            <ul class="c-login__button-list">
+                <li><button id="js-btn-sign-in-goog" class="c-btn c-btn--dark c-btn--full"><i class="fab fa-google"></i><span>Sign in with Google</span></button></li>
+            </ul>
+        </div>
+    </form>
+</div>

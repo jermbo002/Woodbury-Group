@@ -1,0 +1,132 @@
+// --------------------
+// Buttons
+// --------------------
+.c-btn {
+    // By default buttons are the 3D version
+    align-items: center;
+    background: #000;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(#000, .125);
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    height: 34px;
+    justify-content: center;
+    line-height: 1;
+    outline: rgba(#000, .1);
+    padding: .5rem 1.5rem;
+    position: relative;
+    text-decoration: none;
+    @include link-colors(#fff, #fff);
+
+    &:after {
+        background: 0;
+        box-shadow: 0 1px 14px rgba(#000, .2);
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        transition: opacity .125s ease-out;
+        width: 100%;
+    }
+
+    &:hover {
+        &:after {
+            opacity: 1;
+        }
+    }
+
+    &--sm {
+        font-size: .9rem;
+        height: 26px;
+        padding: .4rem 1rem;
+
+        i {
+            font-size: .9rem;
+        }
+    }
+
+    &--lg {
+        font-size: 1.1rem;
+        height: 44px;
+        padding: .75rem 2rem;
+    }
+
+    &--xlg {
+        border-radius: 32px;
+        font-size: 1.25rem;
+        height: 56px;
+        padding: 1rem 4rem;
+
+        &:after {
+            border-radius: 32px;
+        }
+    }
+
+
+    // Icons in Buttons
+    i {
+        color: rgba(#fff, .8);
+        display: inline-block;
+        font-size: 1rem;
+
+        &:first-child {
+            margin: 0 .5rem 0 0;
+        }
+
+        &:last-child {
+            margin: 0 0 0 .5rem;
+        }
+    }
+
+    &--icon-edge {
+        i {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &:first-child {
+                left: 1.5rem;
+            }
+
+            &:last-child {
+                right: 1.5rem;
+            }
+        }
+    }
+
+
+    // Full Width Buttons
+    &--full {
+        display: flex;
+        width: 100%;
+    }
+
+
+    // Text Display Buttons
+    &--text {
+        background: 0;
+        border-radius: 4px;
+        box-shadow: 0 0 0 transparent;
+        color: var(--body-color);
+        outline: rgba(#000, .05);
+        padding: .5rem;
+        @include link-colors(var(--body-color), var(--body-color));
+
+        &:after {
+            display: none;
+        }
+
+        &:hover {
+            background: rgba(#000, .03);
+        }
+
+        &:active {
+            background: rgba(#000, .1);
+        }
+    }
+}

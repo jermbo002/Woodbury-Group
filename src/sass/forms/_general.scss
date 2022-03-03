@@ -1,0 +1,67 @@
+.l-form {
+    &__row {
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        @include mq($bp-large) {
+            flex-direction: row;
+        }
+    }
+
+    &__col {
+        display: block;
+        width: 100%;
+        
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        @include mq($bp-large) {
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+            $cols: 12;
+            @for $i from 2 through $cols {
+                &-#{$i} {
+                    $col-count: $cols / $i;
+                    $width: percentage(($cols / $col-count) / $cols);
+                    $gutter: (1.5 * ($col-count - 1)) / $col-count;
+
+                    display: inline-block;
+                    margin-right: 1.5rem;
+                    width: calc(#{$width} - #{$gutter}rem);
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            &--buttons {
+                align-items: center;
+                display: flex;
+                justify-content: flex-end;
+
+                a,
+                button {
+                    &:not(:last-child) {
+                        margin-right: .5rem;
+                    }
+                }
+
+                &-left {
+                    justify-content: flex-start;
+                }
+
+                &-split {
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}

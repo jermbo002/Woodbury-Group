@@ -1,0 +1,68 @@
+@mixin link-colors($link-color, $hover-color) {
+    color: $link-color;
+
+    &:hover {
+        color: $hover-color;
+    }
+}
+
+// custom scrollbar
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%), $border-rad: 0) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+      border-radius: $border-rad;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+      border-radius: $border-rad;
+  }
+
+  &::-webkit-scrollbar-track {
+      background: $background-color;
+      border-radius: $border-rad;
+  }
+}
+
+// Helper Mixin for Setting Placeholder style
+@mixin set-placeholder-style($color: $body-color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+
+    &:-moz-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+
+    &::-moz-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+}
+
+@mixin susy-media($bp) {
+    @media screen and (min-width: $bp) {
+        @content;
+    }
+}
+
+@mixin mq($bp) {
+    @media screen and (min-width: $bp) {
+        @content;
+    }
+}
+
+@mixin mq-max($bp) {
+    @media screen and (max-width: $bp) {
+        @content;
+    }
+}

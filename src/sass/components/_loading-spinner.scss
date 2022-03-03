@@ -1,0 +1,33 @@
+// --------------------
+// Loading Spinner
+// --------------------
+.c-loading-spinner {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+
+    i {
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-name: loading-spinner;
+        animation-timing-function: linear;
+        color: #fff;
+        display: inline-block !important;
+        font-size: 1.1rem !important;
+        left: auto !important;
+        margin: 0 !important;
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
+    }
+}
+
+@keyframes loading-spinner {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

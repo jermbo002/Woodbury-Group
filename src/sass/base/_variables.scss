@@ -1,0 +1,62 @@
+:root {
+    --hdr-height: 64px;
+    --content-max-width: 1440px;
+    
+    --space-xsm: .5rem;
+    --space-sm: 1rem;
+    --space-med: 1.5rem;
+    --space-lg: 3rem;
+    --space-xl: 4rem;
+    --space-xxl: 6rem;
+    
+    // Fonts
+    --font-primary: 'Open Sans', sans-serif;
+    --font-secondary: 'Cormorant Garamond', serif;
+
+    --font-weight-thin: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-demi: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+
+    // Colors
+    --color-primary: #0000FF;
+    --color-secondary: #33EDFF;
+    
+    --body-background: #fff;
+    --body-color: #000;
+
+    // Media Query Breakpoints
+    --bp-massive:	 1800px;
+    --bp-xxwide:	 1600px;
+    --bp-xwide:		 1400px;
+    --bp-wide:		 1200px;
+    --bp-comp:		 1025px;
+    --bp-large:		 1024px;
+    --bp-tablet:     768px;
+    --bp-mbl-bigger: 550px;
+    --bp-phone-land: 480px;
+    --bp-phone-lg:   370px;
+    --bp-phone-port: 320px;
+
+    --side-padding: 22px;
+}
+
+
+// -----------------------
+// Media Query Breakpoints
+// -----------------------
+$bp-massive:	1800px;
+$bp-xxwide:		1600px;
+$bp-xwide:		1400px;
+$bp-wide:		1200px;
+$bp-comp:		1025px;
+$bp-large:		1024px;
+$bp-tablet:		768px;
+$bp-mbl-bigger: 550px;
+$bp-phone-land: 480px;
+$bp-phone-lg:   370px;
+$bp-phone-port: 320px;

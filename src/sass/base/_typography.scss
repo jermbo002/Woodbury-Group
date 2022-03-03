@@ -1,0 +1,32 @@
+// Typography styles
+// Fonts, type helpers, headers, body text, lists, and other typography helpers
+
+// ------------------------------
+// Embedded Fonts with @font-face
+// ------------------------------
+//@font-face {
+//    font-family: 'font_name';
+//    src: url('/font/file.woff2') format('woff2'),
+//         url('/font/file.woff') format('woff');
+//    font-weight: normal;
+//    font-style: normal;
+//}
+
+
+// --------------------
+// Helpers
+// --------------------
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+
+// --------------------
+// Header Resets
+// --------------------
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+	margin: 0;
+	text-rendering: optimizelegibility;
+}

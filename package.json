@@ -1,0 +1,88 @@
+{
+    "name": "woodgury-group-website",
+    "version": "0.1.0",
+    "cssVersion": "0.1",
+    "deployment": "1",
+    "description": "Client Website for The Woodbury Group",
+    "author": "Select Interactive (www.select-interactive.com)",
+    "license": "UNLICENSED",
+    "env": "dev",
+    "dependencies": {
+        "@prismicio/client": "^6.2.0",
+        "@prismicio/helpers": "^2.1.1",
+        "@webcomponents/webcomponentsjs": "^2.6.0",
+        "body-parser": "^1.19.1",
+        "compression": "^1.7.4",
+        "cookie-parser": "^1.4.5",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.2",
+        "express-urlrewrite": "^1.4.0",
+        "handlebars": "^4.7.7",
+        "http-status": "^1.5.0",
+        "mz": "^2.7.0",
+        "node-fetch": "^2.6.1",
+        "pikaday": "^1.8.2",
+        "string-minify": "^1.0.1",
+        "text-mask-addons": "^3.8.0",
+        "vanilla-text-mask": "^5.1.1",
+        "winston": "^3.6.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.17.2",
+        "@babel/plugin-proposal-class-properties": "^7.16.7",
+        "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+        "@babel/plugin-transform-runtime": "^7.17.0",
+        "@babel/preset-env": "^7.16.11",
+        "@babel/runtime": "^7.17.2",
+        "autoprefixer": "^10.4.2",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "^8.2.3",
+        "babel-plugin-async-to-promises": "^1.0.5",
+        "browser-sync": "^2.27.7",
+        "clean-css": "^5.2.4",
+        "eslint": "^7.14.0",
+        "mkdirp": "^1.0.4",
+        "node-sass": "^7.0.1",
+        "nodemon": "^2.0.15",
+        "npm-run-all": "^4.1.5",
+        "npm-watch": "^0.11.0",
+        "postcss": "^8.4.6",
+        "postcss-custom-media": "^8.0.0",
+        "webpack": "^5.68.0",
+        "webpack-cli": "^4.9.2"
+    },
+    "engines": {
+        "node": ">=14.15.0",
+        "npm": ">=6.14.8"
+    },
+    "main": "server/index.js",
+    "start": "server/index.js",
+    "scripts": {
+        "browser-sync": "browser-sync start -p 'localhost:8080' -f 'server' 'static' 'views' --reload-delay 300 --no-inject-changes --no-notify",
+        "build": "webpack --mode=production",
+        "build-sass": "node src/build-tools/sass.js",
+        "build-js": "webpack --mode=production",
+        "dev": "npm-run-all --parallel watch browser-sync",
+        "eslint": "eslint --fix src/js/",
+        "sass": "node src/build-tools/sass.js",
+        "serve": "nodemon -e js,css,json server/index.js",
+        "start": "node server/index.js",
+        "type-check": "tsc --noEmit",
+        "watch": "npm-watch",
+        "webpack": "webpack --mode=development"
+    },
+    "watch": {
+        "sass": {
+            "patterns": [
+                "/src/sass/"
+            ],
+            "extensions": "scss",
+            "runOnChangeOnly": true
+        },
+        "webpack": {
+            "patterns": "/src/js/",
+            "extensions": "js,scss",
+            "runOnChangeOnly": true
+        }
+    }
+}

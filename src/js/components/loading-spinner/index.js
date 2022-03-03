@@ -1,0 +1,1 @@
+export default '<span class="c-loading-spinner"><i class="far fa-spinner"></i></span>';

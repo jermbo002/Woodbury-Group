@@ -1,0 +1,47 @@
+// -------------------------------------------
+// Border Box - Padding not included in width.
+// -------------------------------------------
+* { box-sizing: border-box; }
+
+
+// --------------------
+// Global HTML Styles
+// --------------------
+html {
+    height: 100%;
+    overflow-y: scroll;
+    
+    // Font
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+    line-height: 22px;
+
+    // Prevent iOS, WinMobile from adjusting font size
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// --------------------
+// Global body styles
+// --------------------
+body {
+    background: var(--body-background);
+    color: var(--body-color);
+}
+
+
+// --------------------
+// Selection
+// --------------------
+::-moz-selection {
+    background: #b3d4fc;
+    color: #fff;
+}
+
+::selection {
+    background: #b3d4fc;
+    color: #fff;
+}
